@@ -1,5 +1,5 @@
-<Route path="/shows" element={<ShowsList />} />
-          <Route path="/shows/:showId" element={<ShowCard />} />
+
+          
           <Route path="/episodes" element={<EpisodesList />} />
           <Route path="/episodes/:episodeId" element={<EpisodeCard />} />
           <Route path="/cast" element={<CastList />} />

@@ -1,12 +1,9 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-function LoginForm({ handleLogin }) {
+function LoginForm({ setIsLoggedIn }) {
 
-    const [user, setUser] = useState({
-        email: '',
-        password: ''
-    });
+    const [user, setUser] = useState({});
     const [errors, setErrors] = useState([]);
     const navigate = useNavigate();
 
@@ -43,6 +40,10 @@ function LoginForm({ handleLogin }) {
             [e.target.name]: e.target.value
         });
     }
+
+    const handleLogin = () => {
+        setIsLoggedIn(true);
+      };
 
     return (
         <div className="row mt-5">

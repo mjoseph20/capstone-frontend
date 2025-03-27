@@ -1,5 +1,3 @@
-import Orange from "../assets/orange.jpg";
-
 function ShowListTile({ show }) {
     
     function formatDate(date) {
@@ -11,7 +9,7 @@ function ShowListTile({ show }) {
         <div className="card m-3 mx-auto" style={{ maxWidth: "800px" }}>
             <div className="row g-0">
                 <div className="col-md-4">
-                    <img src={Orange} className="img-fluid rounded-start h-100" alt="..." />
+                    <img src={show.imageUrl} className="img-fluid rounded-start h-100" alt="..." />
                 </div>
                 <div className="col-md-8">
                     <div className="card-body">

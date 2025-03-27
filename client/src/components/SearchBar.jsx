@@ -1,58 +1,39 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import Dropdown from 'react-bootstrap/Dropdown';
 
 function SearchBar() {
     const [searchTerm, setSearchTerm] = useState('');
-    const [dropdownVisible, setDropdownVisible] = useState(false);
-
-    const items = [
-        { name: 'All Items', link: '/all' },
-        { name: 'Shows', link: '/shows' },
-        { name: 'Episodes', link: '/episodes' },
-        { name: 'Cast Members', link: '/cast-members' }
-    ];
 
     const handleSearchChange = (e) => {
         setSearchTerm(e.target.value);
     }
 
-    const handleFocus = () => {
-        setDropdownVisible(true);
-    }
-
-    const handleBlur = () => {
-        setDropdownVisible(false);
-    }
-
     return (
-        <div>
-            <form className="d-flex" role="search">
-                <Dropdown className="search-container me-2">
-                    <Dropdown.Toggle className="btn btn-tertiary" variant="tertiary" id="dropdown-basic">
-                        <input
-                            className="form-control glyphicon glyphicon-search"
-                            type="text"
-                            placeholder="Search"
-                            aria-label="Search"
-                            value={searchTerm}
-                            onChange={handleSearchChange}
-                            onFocus={handleFocus}
-                            onBlur={handleBlur}
-                            style={{ width: "500px" }}
-                        />
-                    </Dropdown.Toggle>
-                    {dropdownVisible && (
-                        <Dropdown.Menu className="dropdown-menu-light show mx-auto z-3" style={{ maxHeight: "200px" }}>
-                            {items.map((item, index) => (
-                                <Dropdown.Item key={index}>
-                                    <Link className='dropdown-item' to={`${item.link}`}>{item.name}</Link>
-                                </Dropdown.Item>
-                            ))}
-                        </Dropdown.Menu>
-                    )}
-                </Dropdown>
-            </form>
+        <div className="input-group m-2">
+            <input
+                className="form-control"
+                list='datalistOptions'
+                type="text"
+                placeholder="Search"
+                aria-label="Search"
+                value={searchTerm}
+                onChange={handleSearchChange}
+               width={"100px"}
+            />
+            <datalist id='datalistOptions'>
+                <option value="The Office"></option>
+                <option value="Parks and Recreation"></option>
+                <option value="Brooklyn Nine-Nine"></option>
+                <option value="Friends"></option>
+                <option value="The Simpsons"></option>
+                <option value="The Good Place"></option>
+                <option value="The Mandalorian"></option>
+                <option value="Stranger Things"></option>
+                <option value="The Crown"></option>
+                <option value="The Witcher"></option>
+                <option value="The Umbrella Academy"></option>
+                <option value="The Queen's Gambit"></option>
+                <option value="Breaking Bad"></option>
+            </datalist>
         </div>
     );
 }

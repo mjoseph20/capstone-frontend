@@ -1,6 +1,0 @@
-
-          
-          <Route path="/episodes" element={<EpisodesList />} />
-          <Route path="/episodes/:episodeId" element={<EpisodeCard />} />
-          <Route path="/cast" element={<CastList />} />
-          <Route path="/cast/:castId" element={<CastMemberCard />} />

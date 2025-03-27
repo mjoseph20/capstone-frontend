@@ -19,19 +19,21 @@ function EpisodesList() {
 
     return (
         <div className="container mt-5">
-            <h1>Episodes List</h1>
+            <h1 className="text-center">Episodes List</h1>
             {loading ? (
                 <p>Loading...</p>
             ) : (
-                <ul>
-                    {episodes.map((episode) => (
-                        <li key={episode.id} className="list-unstyled">
-                            <Link to={`/episodes/${episode.id}`} className="text-decoration-none text-body">
-                                <EpisodeListTile episode={episode} />
-                            </Link>
-                        </li>
-                    ))}
-                </ul>
+                <div className="d-flex flex-wrap justify-content-center overflow-auto mt-5">
+                    <ul>
+                        {episodes.map((episode) => (
+                            <li key={episode.id} className="list-unstyled">
+                                <Link to={`/episodes/${episode.id}`} className="text-decoration-none text-body">
+                                    <EpisodeListTile episode={episode} />
+                                </Link>
+                            </li>
+                        ))}
+                    </ul>
+                </div>
             )}
         </div>
     );

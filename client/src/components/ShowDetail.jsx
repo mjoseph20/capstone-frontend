@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import Orange from "../assets/orange.jpg";
 
 
 function ShowDetail() {
@@ -28,7 +27,7 @@ function ShowDetail() {
     return (
         <div>
             <div className="card mt-5 mx-auto" style={{ width: "50rem" }}>
-                <img src={Orange} className="card-img-top" alt="..." />
+                <img src={show.imageUrl} className="card-img-top" alt="..." />
                 <div className="card-body">
                     <h5 className="card-title">{show.name}</h5>
                     <p className="card-text">{show.storyline}</p>

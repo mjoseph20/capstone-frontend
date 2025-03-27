@@ -17,19 +17,21 @@ function ShowsList() {
 
     return (
         <div className="container mt-5">
-            <h1>Shows</h1>
+            <h1 className="text-center">Shows</h1>
             {loading ? (
                 <p>Loading...</p>
             ) : (
-                <ul>
-                    {shows.map((show) => (
-                        <li key={show.id} className="list-unstyled">
-                            <Link to={`/shows/${show.id}`} className="text-decoration-none text-body">
-                                <ShowListTile show={show} />
-                            </Link>
-                        </li>
-                    ))}
-                </ul>
+                <div className="d-flex flex-wrap justify-content-center overflow-auto mt-5">
+                    <ul >
+                        {shows.map((show) => (
+                            <li key={show.id} className="list-unstyled">
+                                <Link to={`/shows/${show.id}`} className="text-decoration-none text-body">
+                                    <ShowListTile show={show} />
+                                </Link>
+                            </li>
+                        ))}
+                    </ul>
+                </div>
             )}
         </div>
     );

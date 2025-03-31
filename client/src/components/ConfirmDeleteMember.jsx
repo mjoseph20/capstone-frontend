@@ -27,12 +27,12 @@ function ConfirmDeleteMember() {
 
     return (
         <div>
-            <div className="card text-center mx-auto mt-5" style={{ width: "18rem" }}>
+            <div className="card text-center mx-auto mt-5" style={{ width: "18rem", height: "18rem" }}>
                 <div className="card-header">
                     <p className="card-text">Confirm Deletion</p>
                 </div>
-                <div className="card-body">
-                    <p className="card-text">Are you sure you want to remove this member from your team?</p>
+                <div className="card-body text-center">
+                    <p className="card-text my-5">Are you sure you want to remove this member from your team?</p>
                 </div>
                 <div className="card-footer">
                     <button type="button" className="btn btn-secondary me-2" onClick={() => navigate(-1)}>Cancel</button>

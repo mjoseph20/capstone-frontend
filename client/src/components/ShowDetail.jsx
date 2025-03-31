@@ -26,19 +26,19 @@ function ShowDetail() {
 
     return (
         <div>
-            <div className="card mt-5 mx-auto" style={{ width: "50rem" }}>
-                <img src={show.imageUrl} className="card-img-top" alt="..." />
+            <div className="card mt-5 mx-auto" style={{ width: "25rem" }}>
+                <img src={show.imageUrl} className="card-img-top w-100 mx-auto" alt="..." />
                 <div className="card-body">
                     <h5 className="card-title">{show.name}</h5>
                     <p className="card-text">{show.storyline}</p>
                 </div>
                 <div className="card-footer">
                     <ul className="list-group">
-                        <li className="list-group-item">{show.genre}</li>
-                        <li className="list-group-item">{show.rating}.0/10.0</li>
-                        <li className="list-group-item">{formatDate(show.startDate)} - {formatDate(show.endDate)}</li>
+                        <li className="list-group-item">Genre: {show.genre}</li>
+                        <li className="list-group-item">Rating: {show.rating}.0/10.0</li>
+                        <li className="list-group-item">Show Run: {formatDate(show.startDate)} - {formatDate(show.endDate)}</li>
                         <li className="list-group-item">Created by: {show.creator}</li>
-                        <li className="list-group-item">{show.productionCompany}</li>
+                        <li className="list-group-item">Production: {show.productionCompany}</li>
                     </ul>
                 </div>
             </div>

@@ -25,8 +25,8 @@ function EpisodeDetail() {
 
     return (
         <div>
-            <div className='card mt-5 mx-auto' style={{ width: '50rem' }}>
-                <img src={episode.imageUrl} className='card-img-top' alt='...' />
+            <div className='card mt-5 mx-auto' style={{ width: '25rem' }}>
+                <img src={episode.imageUrl} className='card-img-top w-100 mx-auto' alt='...' />
                 <div className='card-body'>
                     <h5 className='card-title'>{episode.title}</h5>
                     <p className='card-text'>{episode.description}</p>
@@ -34,8 +34,8 @@ function EpisodeDetail() {
                 <div className='card-footer'>
                     <ul className='list-group'>
                         <li className='list-group-item'>S:{episode.season} - E:{episode.episodeNumber}</li>
-                        <li className='list-group-item'>{formatDate(episode.airDate)}</li>
-                        <li className='list-group-item'>{episode.rating}.0/10.0</li>
+                        <li className='list-group-item'>Air Date: {formatDate(episode.airDate)}</li>
+                        <li className='list-group-item'>Rating: {episode.rating}.0/10.0</li>
                     </ul>
                 </div>
             </div>

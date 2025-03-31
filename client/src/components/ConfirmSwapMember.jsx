@@ -26,12 +26,12 @@ function ConfirmSwapMember() {
 
     return (
         <div>
-            <div className="card mx-auto" style={{ width: '18rem' }}>
+            <div className="card mx-auto" style={{ width: '18rem', height: '18rem' }}>
                 <div className='card-header'>
                     <h5 className="card-title text-center">Confirm Swap</h5>
                 </div>
-                <div className="card-body">
-                    <p className="card-text">Are you sure you want to swap Member #{existingCastMemberId} for member #{castMemberId}?</p>
+                <div className="card-body text-center">
+                    <p className="card-text my-5">Are you sure you want to swap Member #{existingCastMemberId} for member #{castMemberId}?</p>
                 </div>
                 <div className='card-footer d-flex justify-content-around'>
                     <button className='btn btn-warning me-2' onClick={() => swapMateInTeam()}>Confirm</button>

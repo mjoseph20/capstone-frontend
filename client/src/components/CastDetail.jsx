@@ -34,7 +34,7 @@ function CastDetail() {
                 </div>
                 <div className="card-footer">
                     <ul className="list-group">
-                        <li className="list-group-item">{formatDate(castMember.birthDate)}</li>
+                        <li className="list-group-item">Born: {formatDate(castMember.birthDate)}</li>
                         <li className="list-group-item">{castMember.biography}</li>
                         <li className="list-group-item">Fun Fact: {castMember.randomFact}</li>
                     </ul>
